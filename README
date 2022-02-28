@@ -1,0 +1,32 @@
+That is a multiple scenes render project of a Disco Party ring through which you can browse pressing T key.
+Basically,  the colors are created only with the light, following Phong Model, and each scene is created in it`s own way.
+I used OpenGl framework for its programming. The project only works with it.
+The color components: 
+culoarea=Ke+Ia⋅Ka+∑ifati⋅Isursăi(Kd⋅max(N⃗ ⋅Li→,0)+Ks⋅lumi⋅max(N⃗ ⋅Hi→,0)n)
+https://en.wikipedia.org/wiki/Phong_reflection_model
+
+
+    if (key == GLFW_KEY_T && model_iluminare == 0)
+    {
+        model_iluminare = 1;
+    }
+    else
+        if (key == GLFW_KEY_T && model_iluminare == 1)
+        {
+            model_iluminare = 2;
+        }
+        else
+            if (key==GLFW_KEY_T && model_iluminare == 2)
+            {
+                model_iluminare =3 ;
+            }
+            else
+                if (key == GLFW_KEY_T && model_iluminare == 3)
+                {
+                    model_iluminare = 0;
+                }
+         
+		 You can follow this conditions to obtain each color components for each scene.
+		 Model_iluminare is used for scene no. 
+Also, I used fragment and vertex shaders for figures, color and textures, you need them for light's composition. 
+ 
